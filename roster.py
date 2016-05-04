@@ -13,3 +13,11 @@ with open('roster.csv') as file:
     for row in players:
         r = [row[column] for column in range(14)]
         cur.execute("INSERT INTO roster (jersey, name, age, pos, games_played, games_started, weight, height, college, bday, years_in_NFL, value, drafted, salary) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", r)
+
+
+
+# def search_players(roster):
+#     search = input("Search for a player: ").lower()
+#     cur.execute("SELECT * FROM roster WHERE name = search")
+#
+# search_players(roster)
